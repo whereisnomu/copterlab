@@ -1,5 +1,5 @@
 var modal = document.getElementById("myModal");
-var butn = document.querySelectorAll(".openModalBtn");
+var butn = document.querySelectorAll(".open-modal");
 
 butn.forEach(function (item) {
   item.addEventListener("click", function (e) {

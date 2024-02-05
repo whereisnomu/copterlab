@@ -1,0 +1,245 @@
+@use "../variables.scss" as *;
+
+#drive {
+  #marquee {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 60px 0;
+    margin-bottom: 60px;
+
+    @keyframes marquee {
+      0% {
+        left: 100%;
+      }
+      100% {
+        left: -100%;
+      }
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+
+      .h2 {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 900;
+        text-shadow: $text-shadow;
+        color: $w;
+
+        span {
+          color: $b;
+          text-shadow: none;
+        }
+      }
+    }
+  }
+
+  .drive {
+    padding: 0 100px 200px;
+
+    .cards {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+
+      .card {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        padding: 40px;
+        height: 100%;
+
+        //   max-width: 600px;
+
+        .union {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+          max-width: 450px;
+
+          .h3 {
+            color: $b;
+            max-width: 350px;
+          }
+
+          .h4 {
+            color: $b;
+            text-transform: none;
+          }
+        }
+
+        &.black,
+        &.green {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &.black {
+          background-color: $dark;
+          overflow: hidden;
+
+          .h2 {
+            color: $w;
+            line-height: 40px;
+            font-weight: 500;
+          }
+
+          .vector__q {
+            position: absolute;
+            right: -100px;
+          }
+        }
+
+        &.green {
+          flex-direction: column;
+          background-color: $green;
+          align-items: flex-start;
+          gap: unset;
+
+          .big {
+            font-size: 80px;
+            font-weight: 500;
+          }
+
+          h3 {
+            font-weight: 500;
+            font-size: 24px;
+            text-transform: uppercase;
+            max-width: 500px;
+          }
+
+          .vector__e {
+            position: absolute;
+            right: 60px;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    @media (max-width: $lscreen) {
+      padding: 0 60px 200px;
+    }
+
+    @media (max-width: $notebooks) {
+      padding: 0 40px 100px;
+
+      .cards {
+        gap: 10px;
+
+        .card {
+          padding: 30px;
+
+          .union {
+            gap: 10px;
+
+            .h4 {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $tablet) {
+      padding: 0 20px 100px;
+
+      .cards {
+        gap: 20px;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+
+        .card {
+          padding: 40px;
+
+          &.black {
+            justify-content: flex-start;
+
+            .h2 {
+              font-size: 24px;
+              line-height: unset;
+              text-align: left;
+            }
+
+            .vector__q {
+              right: -50px;
+              height: 100%;
+            }
+          }
+
+          .union {
+            .h4 {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      .cards {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .card {
+          padding: 20px;
+          gap: 10px;
+
+          .union {
+            .h4 {
+              font-size: 16px;
+            }
+          }
+
+          &.black,
+          &.green {
+            height: 280px;
+          }
+
+          &.black {
+            .h2 {
+              font-size: 20px;
+            }
+          }
+
+          &.green {
+            h3 {
+              font-size: 20px;
+            }
+
+            .big {
+              font-size: 60px;
+            }
+          }
+
+          .arrow {
+            // display: none;
+            object-fit: contain;
+
+            width: 15px;
+            height: 30px;
+          }
+
+          .union {
+            gap: 5px;
+          }
+        }
+      }
+    }
+  }
+}
