@@ -65,9 +65,87 @@
     padding: 100px 60px;
 
     .text {
-      
+      .h4 {
+        max-width: 550px;
+      }
     }
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 100px 40px;
+
+    .text {
+      .h4 {
+        max-width: 400px;
+      }
+    }
+
     .copter {
+      max-width: 450px;
+      top: -150px;
+    }
+
+    .vector {
+      scale: unset;
+      width: -webkit-fill-available;
+      bottom: auto;
+      top: auto;
+    }
+
+    .button {
+      max-width: 250px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 100px 20px;
+
+    flex-direction: column;
+
+    .text {
+      gap: 10px;
+      margin-bottom: 20px;
+
+      .h2,
+      .h4 {
+        max-width: 550px;
+        text-align: center;
+      }
+    }
+
+    .copter {
+      max-width: 400px;
+      top: -130px;
+    }
+
+    .vector {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 80px 20px;
+
+    .text {
+      .h4 {
+        text-align: left;
+      }
+    }
+
+    .button {
+      max-width: unset;
+    }
+
+    .copter {
+      max-width: 320px;
+      top: -100px;
+    }
+
+    .vector {
+      display: none;
     }
   }
 }
