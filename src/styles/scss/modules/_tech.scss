@@ -10,7 +10,7 @@
   position: relative;
   z-index: 1;
   padding: 100px;
-  gap: 50px;
+  gap: 60px;
 
   .disciplines {
     z-index: 2;
@@ -19,6 +19,8 @@
     grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: space-between;
     width: 100%;
+    max-width: calc(100% - 20%);
+    align-items: center;
 
     &.HIGH {
       .discipline {
@@ -49,8 +51,9 @@
       text-align: center;
 
       .circle {
-        position: relative;
-        bottom: -24px;
+        position: absolute;
+        top: -80px;
+        right: 35%;
       }
 
       .wrap {
@@ -108,6 +111,10 @@
   @media (max-width: $lscreen) {
     padding: 100px 60px;
 
+    .disciplines {
+      max-width: unset;
+    }
+
     .text {
       gap: 10px;
 
@@ -122,6 +129,14 @@
 
     .disciplines {
       grid-template-columns: repeat(2, 1fr);
+
+      .discipline {
+        .circle {
+          width: 100px;
+          height: 100px;
+          left: 36%;
+        }
+      }
     }
 
     .text {
@@ -143,6 +158,12 @@
 
       .discipline {
         width: 100%;
+
+        .circle {
+          position: relative;
+          left: 0;
+          top: 30px;
+        }
       }
 
       &.HIGH,

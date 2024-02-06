@@ -1,0 +1,274 @@
+@use "../variables.scss" as *;
+
+#choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+
+  .title {
+    margin-bottom: 50px;
+    max-width: 560px;
+    text-align: center;
+  }
+
+  .packages {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+
+    .package {
+      width: 100%;
+      max-width: 610px;
+      border: 1px solid $green;
+      border-radius: 15px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: max-content;
+
+      .h2,
+      .h3,
+      .h4 {
+        color: $b;
+      }
+
+      span {
+        &.h2 {
+          font-weight: 600;
+          font-family: "maniford";
+        }
+      }
+
+      .h4 {
+        text-transform: none;
+      }
+
+      &.center {
+        background-color: $green;
+      }
+
+      &.school {
+        background-color: $w;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .type {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+
+          .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: -30px;
+
+            background-color: $b;
+            height: 65px;
+            width: 100%;
+            max-width: 400px;
+            text-align: right;
+
+            .h2 {
+              color: $w;
+            }
+          }
+        }
+
+        .head {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          border-bottom: 1px dashed $b;
+          padding-bottom: 40px;
+
+          .h3 {
+            font-size: 24px;
+            line-height: 27px;
+          }
+
+          .h4 {
+            text-transform: none;
+          }
+        }
+      }
+
+      .invest {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        padding-bottom: 40px;
+        border-bottom: 1px dashed $b;
+
+        .point {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
+
+      .clients {
+        .h3 {
+          font-size: 24px;
+          margin-bottom: 30px;
+        }
+
+        .client {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          span.h2.green {
+            color: $green;
+          }
+        }
+
+        .wrap {
+          display: flex;
+          gap: 10px;
+
+          .client {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .h4 {
+              max-width: 570px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    padding: 100px 60px;
+
+    .packages {
+      grid-template-columns: unset;
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 100px 40px;
+
+    .packages {
+      .h4 {
+        font-size: 18px;
+      }
+
+      .h3 {
+        max-width: 500px;
+      }
+
+      .package {
+        .clients {
+          .h3 {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 50px 20px;
+
+    .packages {
+      .h4,
+      .h3,
+      .h2 {
+        text-align: left;
+      }
+
+      .h4 {
+        font-size: 16px;
+      }
+
+      .package {
+        gap: 15px;
+
+        .wrapper {
+          .type {
+            img {
+              width: 100px;
+              height: 100px;
+            }
+          }
+          .head {
+            padding-bottom: 25px;
+          }
+        }
+
+        .invest {
+          padding-bottom: 25px;
+        }
+        .clients {
+          .h3 {
+            font-size: 22px;
+          }
+
+          .wrap {
+            flex-direction: column;
+
+            .client {
+              gap: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .title {
+      margin-bottom: 25px;
+    }
+
+    .packages {
+      .package {
+        padding: 15px;
+        gap: 15px;
+
+        .wrapper {
+          gap: 20px;
+
+          .type {
+            img {
+              width: 80px;
+              height: 80px;
+            }
+            .wrap {
+              margin-right: -15px;
+            }
+          }
+
+          .head {
+            .h3 {
+              font-size: 18px;
+              line-height: 22px;
+            }
+          }
+        }
+
+        .clients {
+          .h3 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
