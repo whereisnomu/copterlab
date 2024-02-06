@@ -1,0 +1,197 @@
+@use "../variables.scss" as *;
+
+#tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $background;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  padding: 100px;
+  gap: 50px;
+
+  .disciplines {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: space-between;
+    width: 100%;
+
+    &.HIGH {
+      .discipline {
+        &.L_GRID {
+          grid-row: 2;
+        }
+
+        &.R_GRID {
+          grid-column: 2;
+        }
+      }
+    }
+
+    &.LOW {
+      .discipline {
+        &.L_GRID {
+          grid-row: 2;
+        }
+
+        &.R_GRID {
+          grid-column: 2;
+        }
+      }
+    }
+
+    .discipline {
+      position: relative;
+      text-align: center;
+
+      .circle {
+        position: relative;
+        bottom: -24px;
+      }
+
+      .wrap {
+        background-color: $w;
+        max-width: 400px;
+        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.15);
+
+        border-radius: 20px;
+        padding: 40px 20px;
+
+        .h4 {
+          text-align: center;
+          color: $b;
+        }
+      }
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 3;
+
+    gap: 20px;
+
+    .h2 {
+      text-transform: uppercase;
+      max-width: 670px;
+      text-align: center;
+
+      .f {
+        color: $b;
+      }
+    }
+    .h2,
+    .h4 {
+      color: $b;
+    }
+
+    .h4 {
+      max-width: 900px;
+      text-transform: none;
+    }
+  }
+
+  .vector {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: $lscreen) {
+    padding: 100px 60px;
+
+    .text {
+      gap: 10px;
+
+      .h2 {
+        font-size: 26px;
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 100px 40px;
+
+    .disciplines {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text {
+      .h4 {
+        max-width: 600px;
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 50px 20px;
+
+    .disciplines {
+      grid-template-columns: unset;
+      grid-template-rows: unset;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+
+      .discipline {
+        width: 100%;
+      }
+
+      &.HIGH,
+      &.LOW {
+        .discipline {
+          &.L_GRID,
+          &.R_GRID {
+            grid-column: unset;
+            grid-row: unset;
+          }
+        }
+      }
+    }
+
+    .text {
+      width: 100%;
+
+      .h2 {
+        width: 100%;
+        max-width: unset;
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    gap: 30px;
+
+    padding: 30px 20px;
+
+    .text {
+      .h2 {
+        .f {
+          font-size: 20px;
+        }
+      }
+      .h4 {
+        text-align: left;
+      }
+    }
+
+    .disciplines {
+      .discipline {
+        .circle {
+          width: 80px;
+          height: 80px;
+          bottom: -30px;
+        }
+      }
+    }
+  }
+}

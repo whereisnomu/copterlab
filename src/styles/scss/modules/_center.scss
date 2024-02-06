@@ -1,0 +1,209 @@
+@use "../variables.scss" as *;
+
+#center {
+  position: relative;
+
+  .img {
+    img {
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: -5px;
+    }
+  }
+
+  .open {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 80px 100px;
+    background-color: $dark;
+    justify-content: center;
+
+    .h2 {
+      color: $w;
+      max-width: 605px;
+      align-self: center;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      .step {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+        align-items: flex-start;
+
+        img {
+          object-fit: contain;
+
+          height: 58px;
+        }
+
+        .h4 {
+          max-width: 280px;
+        }
+      }
+    }
+  }
+
+  .circle {
+    position: absolute;
+    width: 100%;
+    max-width: 255px;
+    border-radius: 50%;
+    background-color: $green;
+    height: 100%;
+    max-height: 255px;
+
+    top: 38%;
+    right: 5%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 25px;
+    gap: 20px;
+
+    span {
+      font-size: 70px;
+    }
+
+    .h4 {
+      color: $b;
+      font-size: 16px;
+      max-width: 250px;
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    .open {
+      padding: 80px 60px;
+      gap: 50px;
+
+      .h2 {
+        max-width: 495px;
+      }
+    }
+
+    .circle {
+      max-height: 230px;
+      max-width: 230px;
+      line-height: 20px;
+
+      span {
+        font-size: 60px;
+      }
+
+      .h4 {
+        font-size: 16px;
+        max-width: 240px;
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .img {
+      img {
+        max-height: 400px;
+      }
+    }
+    .open {
+      padding: 80px 40px;
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(2, 225px);
+        grid-auto-rows: auto;
+        justify-content: center;
+
+        gap: 40px;
+
+        .step {
+          .h4 {
+            max-width: 300px;
+          }
+        }
+      }
+    }
+
+    .circle {
+      max-width: 190px;
+      max-height: 190px;
+      line-height: 18px;
+      top: 27%;
+
+      span {
+        font-size: 50px;
+      }
+
+      .h4 {
+        font-size: 13px;
+        max-width: 165px;
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .img {
+      img {
+        max-height: 300px;
+      }
+    }
+
+    .open {
+      padding: 50px 20px;
+      gap: 30px;
+
+      .steps {
+        grid-template-columns: 250px;
+        gap: 40px;
+
+        .step {
+          align-items: center;
+
+          .h4 {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .circle {
+      max-width: 150px;
+      max-height: 150px;
+      line-height: 16px;
+      top: 16%;
+      padding: unset;
+
+      gap: 10px;
+
+      span {
+        font-size: 40px;
+      }
+
+      .h4 {
+        font-size: 12px;
+        max-width: 140px;
+        scale: 0.9;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .img {
+      img {
+        max-height: 250px;
+      }
+    }
+
+    .circle {
+      top: 12%;
+    }
+  }
+}
