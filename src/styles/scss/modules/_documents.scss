@@ -1,0 +1,127 @@
+@use "../variables.scss" as *;
+
+#documents {
+  padding: 100px;
+  background-color: $dark;
+  color: $w;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    .h2 {
+      color: $w;
+      text-align: left;
+      max-width: 900px;
+    }
+
+    .h4 {
+      text-transform: none;
+      max-width: 750px;
+      text-align: left;
+    }
+  }
+
+  .form {
+    max-width: unset;
+    background-color: $dark;
+
+    filter: drop-shadow(8px 8px 100px #00000060);
+    padding: 40px;
+
+    .inputs {
+      display: grid;
+      gap: 25px;
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 30px;
+
+      input {
+        background: $grey;
+        font-size: 18px;
+
+        &::placeholder {
+          color: $b;
+        }
+      }
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+
+      .policy {
+        max-width: 570px;
+        font-size: 12px;
+      }
+
+      .button {
+        max-width: unset;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    padding: 100px 60px;
+
+    .text {
+      .h2 {
+        max-width: 700px;
+        font-size: 24px;
+      }
+
+      .h4 {
+        max-width: 600px;
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 100px 40px;
+
+    .form {
+      .wrapper {
+        .button {
+          height: min-content;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 100px 20px;
+
+    .text {
+      .h2 {
+        font-size: 22px;
+        max-width: 600px;
+      }
+    }
+
+    .form {
+      .inputs,
+      .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 80px 20px;
+
+    .text {
+      .h2 {
+        font-size: 20px;
+        max-width: 600px;
+      }
+    }
+
+    .form {
+      padding: 10px;
+    }
+  }
+}
