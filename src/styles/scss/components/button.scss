@@ -13,7 +13,11 @@
   font-size: 18px;
   text-transform: uppercase;
 
-  box-shadow: 0px 4px 30px 0px #b8f44650;
+  box-shadow: 0px 4px 30px 0px #b7f446c8;
+
+  @media (max-width: $notebooks) {
+    font-size: 12px;
+  }
 
   &.transparent {
     border: 1px solid $blue;

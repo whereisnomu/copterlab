@@ -21,6 +21,10 @@
         color: $w;
         font-weight: 500;
         max-width: 850px;
+
+        br {
+          display: none;
+        }
       }
 
       .h4 {
@@ -77,6 +81,9 @@
 
       h4 {
         max-width: 300px;
+        br {
+          display: none;
+        }
       }
 
       h3 {
@@ -153,6 +160,12 @@
         padding: 50px 60px;
         max-width: 350px;
 
+        .h4 {
+          br {
+            display: block;
+          }
+        }
+
         h3 {
           font-size: 30px;
         }
@@ -185,7 +198,6 @@
 
       .button {
         max-width: 250px;
-        font-size: 14px;
       }
     }
 
@@ -215,6 +227,10 @@
           max-width: unset;
           font-size: 22px;
           text-align: center;
+
+          br {
+            display: none;
+          }
         }
 
         h3 {
@@ -282,6 +298,19 @@
           text-align: left;
           font-size: 14px;
           max-width: 300px;
+        }
+
+        .h2 {
+          letter-spacing: 1px;
+          font-size: 16px;
+
+          br {
+            display: block;
+          }
+
+          span {
+            max-width: 300px;
+          }
         }
       }
 

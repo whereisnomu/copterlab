@@ -1,0 +1,35 @@
+include ../components/link.pug
+
+section#download
+   .disciplines.HIGH
+      .discipline.L_GRID
+         img(src="./img/tech/black.svg", width=110 height=110 alt="black plus").circle
+         .wrap
+            h4.h4 условия франшизы
+      .discipline.R_GRID
+         img(src="./img/tech/green.svg", width=110 height=110 alt="green plus").circle
+         .wrap
+            h4.h4 фото и видео с занятий
+
+   .text
+      h2.h2 
+         span.f ГОТОВЫЙ НАБОР МАТЕРИАЛОВ ДЛЯ СКАЧИВАНИЯ
+      h4.h4 выберите как получить материалы
+
+      .links 
+         +link('#', 'wa')
+         +link('#', 'tg')
+         +link('#', 'mail')
+
+
+   .disciplines.LOW
+      .discipline.L_GRID
+         img(src="./img/tech/green.svg", width=110 height=110 alt="green plus").circle
+         .wrap
+            h4.h4 подробная финансовая модель
+      .discipline.R_GRID
+         img(src="./img/tech/black.svg", width=110 height=110 alt="black plus").circle
+         .wrap
+            h4.h4 программа федеральной образовательной программы коптер лаб
+   
+   img(src="./img/tech/x_bg.svg", alt="x_vector").vector

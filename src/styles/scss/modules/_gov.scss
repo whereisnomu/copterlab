@@ -15,6 +15,7 @@
   .h4 {
     text-transform: none;
     font-size: 14px;
+    text-align: center;
   }
 
   .title {
@@ -90,6 +91,44 @@
     }
   }
 
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .arrow {
+      margin: 40px 0;
+    }
+
+    .wrapper {
+      background-color: $green;
+      width: 100%;
+      border-radius: 20px;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        margin-bottom: 20px;
+        object-fit: contain;
+        width: 100%;
+      }
+
+      .h3 {
+        margin-bottom: 30px;
+      }
+
+      .ticket {
+        text-transform: uppercase;
+        max-width: 700px;
+        font-size: 18px;
+      }
+    }
+  }
+
   @media (max-width: $lscreen) {
     padding: 80px 60px;
 
@@ -150,6 +189,24 @@
         }
       }
     }
+
+    .banner {
+      .wrapper {
+        img {
+          max-width: 400px;
+          margin-bottom: unset;
+        }
+
+        .h3 {
+          margin-bottom: 20px;
+        }
+
+        .ticket {
+          max-width: 550px;
+          font-size: 16px;
+        }
+      }
+    }
   }
 
   @media (max-width: $tablet) {
@@ -161,6 +218,10 @@
 
     .interactions {
       .interaction {
+        .h3 {
+          text-align: center;
+        }
+
         table {
           tbody {
             display: flex;
@@ -173,6 +234,11 @@
 
               td {
                 border-bottom: 1px dashed $b;
+                height: -webkit-fill-available;
+                padding: 0 10px;
+                text-align: center;
+                justify-content: space-around;
+                display: flex;
               }
             }
 
@@ -182,6 +248,8 @@
 
               td {
                 border-bottom: 1px dashed $b;
+                display: flex;
+                align-items: center;
 
                 &:last-child {
                   border-bottom: unset;
@@ -205,11 +273,69 @@
         }
       }
     }
+
+    .banner {
+      .wrapper {
+        img {
+          max-width: 350px;
+        }
+      }
+    }
   }
 
   @media (max-width: $mobile) {
     .title {
       margin-bottom: 25px;
+    }
+
+    .interactions {
+      .interaction {
+        .h3 {
+          font-size: 16px;
+          display: flex;
+          justify-content: center;
+        }
+
+        table {
+          tr {
+            td {
+              .h4 {
+                font-size: 12px;
+              }
+            }
+
+            &.without {
+              td {
+                .h4 {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .push {
+        .supports {
+          grid-gap: 20px;
+        }
+      }
+    }
+
+    .banner {
+      .arrow {
+        margin: 20px 0;
+        height: 60px;
+      }
+      .wrapper {
+        .h3 {
+          font-size: 18px;
+        }
+
+        .ticket {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

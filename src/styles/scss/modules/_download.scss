@@ -1,0 +1,250 @@
+@use "../variables.scss" as *;
+
+#download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $background;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  padding: 100px;
+  gap: 60px;
+
+  .disciplines {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: space-between;
+    width: 100%;
+    max-width: calc(100% - 20%);
+    align-items: center;
+
+    &.HIGH {
+      .discipline {
+        &.L_GRID {
+          grid-row: 1;
+        }
+
+        &.R_GRID {
+          grid-column: 2;
+          grid-row: 2;
+        }
+      }
+    }
+
+    &.LOW {
+      .discipline {
+        &.L_GRID {
+          grid-row: 1;
+        }
+
+        &.R_GRID {
+          grid-column: 2;
+          grid-row: 2;
+        }
+      }
+    }
+
+    .discipline {
+      position: relative;
+      text-align: center;
+
+      .circle {
+        position: absolute;
+        top: -80px;
+        right: 35%;
+      }
+
+      .wrap {
+        background-color: $w;
+        max-width: 400px;
+        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.15);
+
+        border-radius: 20px;
+        padding: 40px 20px;
+
+        .h4 {
+          text-align: center;
+          color: $b;
+        }
+      }
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 3;
+
+    gap: 20px;
+
+    .links {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .h2 {
+      text-transform: uppercase;
+      max-width: 800px;
+      text-align: center;
+
+      .f {
+        color: $b;
+      }
+    }
+    .h2,
+    .h4 {
+      color: $b;
+    }
+
+    .h4 {
+      max-width: 900px;
+      text-transform: uppercase;
+    }
+  }
+
+  .vector {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: $lscreen) {
+    padding: 100px 60px;
+
+    .disciplines {
+      max-width: unset;
+    }
+
+    .text {
+      gap: 20px;
+
+      .h2 {
+        font-size: 26px;
+        max-width: 650px;
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 100px 40px;
+
+    .disciplines {
+      grid-template-columns: repeat(2, 1fr);
+
+      .discipline {
+        .circle {
+          width: 100px;
+          height: 100px;
+          left: 36%;
+        }
+      }
+    }
+
+    .text {
+      .h4 {
+        max-width: 600px;
+      }
+
+      .links {
+        a {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 50px 20px;
+
+    .disciplines {
+      grid-template-columns: unset;
+      grid-template-rows: unset;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+
+      .discipline {
+        width: 100%;
+
+        .circle {
+          position: relative;
+          left: 0;
+          top: 30px;
+        }
+      }
+
+      &.HIGH,
+      &.LOW {
+        .discipline {
+          &.L_GRID,
+          &.R_GRID {
+            grid-column: unset;
+            grid-row: unset;
+          }
+        }
+      }
+    }
+
+    .text {
+      width: 100%;
+      gap: 10px;
+
+      .h4 {
+        margin-bottom: 10px;
+      }
+
+      .links {
+        gap: 20px;
+      }
+
+      .h2 {
+        width: 100%;
+        max-width: unset;
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    gap: 30px;
+
+    padding: 30px 20px;
+
+    .text {
+      align-items: flex-start;
+
+      .h2 {
+        .f {
+          font-size: 20px;
+        }
+      }
+
+      .h4 {
+        min-width: unset;
+        text-align: left;
+      }
+    }
+
+    .disciplines {
+      .discipline {
+        .circle {
+          width: 80px;
+          height: 80px;
+          bottom: -30px;
+        }
+      }
+    }
+  }
+}

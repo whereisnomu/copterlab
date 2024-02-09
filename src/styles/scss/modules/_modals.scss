@@ -1,7 +1,7 @@
 @use "../variables.scss" as *;
 
 #modals {
-  padding: 100px;
+  padding: 80px 100px 60px;
   display: flex;
   flex-direction: column;
 
@@ -26,6 +26,10 @@
 
   .h4 {
     text-transform: none;
+  }
+
+  .h4 {
+    max-width: 200px;
   }
 
   .modals {
@@ -133,7 +137,7 @@
   }
 
   @media (max-width: $lscreen) {
-    padding: 100px 60px;
+    padding: 80px 60px 60px;
 
     .modals {
       grid-template-columns: repeat(3, 1fr);
@@ -172,7 +176,11 @@
   }
 
   @media (max-width: $notebooks) {
-    padding: 100px 40px;
+    padding: 80px 40px 60px;
+
+    .h4 {
+      max-width: 180px;
+    }
 
     .title {
       max-width: 500px;
@@ -195,7 +203,7 @@
   }
 
   @media (max-width: $tablet) {
-    padding: 100px 20px;
+    padding: 80px 20px;
     align-items: center;
 
     .modals {
@@ -277,6 +285,7 @@
           flex-direction: column;
           height: 50px;
         }
+
         .table {
           padding: 10px 20px;
           width: 100%;
