@@ -274,6 +274,10 @@
       }
     }
 
+    .h3 {
+      margin-bottom: 25px;
+    }
+
     .banner {
       .wrapper {
         img {
@@ -316,6 +320,10 @@
       }
 
       .push {
+        .h3 {
+          font-size: 16px;
+          margin-bottom: 25px;
+        }
         .supports {
           grid-gap: 20px;
         }
