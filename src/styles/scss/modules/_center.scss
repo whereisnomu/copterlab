@@ -22,6 +22,7 @@
     .h2 {
       color: $w;
       max-width: 650px;
+      word-spacing: 2px;
       align-self: center;
     }
 
@@ -72,7 +73,7 @@
     justify-content: center;
     text-align: center;
     line-height: 25px;
-    gap: 20px;
+    gap: 25px;
 
     span {
       font-family: "maniford";
@@ -83,7 +84,7 @@
     .h4 {
       color: $b;
       font-size: 16px;
-      max-width: 250px;
+      max-width: 200px;
     }
   }
 
@@ -93,7 +94,7 @@
       gap: 50px;
 
       .h2 {
-        max-width: 535px;
+        max-width: 540px;
       }
     }
 
@@ -108,7 +109,7 @@
 
       .h4 {
         font-size: 16px;
-        max-width: 240px;
+        max-width: 200px;
       }
     }
   }
@@ -181,13 +182,13 @@
     }
 
     .circle {
-      max-width: 150px;
+      max-width: 155px;
       max-height: 150px;
       line-height: 16px;
       top: 16%;
       padding: unset;
 
-      gap: 10px;
+      gap: 15px;
 
       span {
         font-size: 40px;
@@ -195,7 +196,7 @@
 
       .h4 {
         font-size: 12px;
-        max-width: 140px;
+        max-width: 150px;
         scale: 0.9;
       }
     }

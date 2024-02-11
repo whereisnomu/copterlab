@@ -11,6 +11,7 @@
     margin-bottom: 50px;
     max-width: 600px;
     text-align: center;
+    word-spacing: 2px;
   }
 
   .packages {
@@ -23,7 +24,7 @@
       width: 100%;
       max-width: 610px;
       border: 1px solid $green;
-      border-radius: 15px;
+      border-radius: 20px;
       padding: 30px;
       display: flex;
       flex-direction: column;

@@ -1,6 +1,6 @@
 @use "../variables.scss" as *;
 
-#mainscreen {
+#main {
   .text {
     padding: 50px 100px;
   }
@@ -20,7 +20,8 @@
         text-transform: uppercase;
         color: $w;
         font-weight: 500;
-        max-width: 850px;
+        max-width: 820px;
+        font-size: 30px;
 
         br {
           display: none;
@@ -42,8 +43,8 @@
 
     .background {
       object-fit: contain;
-      width: 100%;
       margin-bottom: -3px;
+      width: 100%;
     }
 
     .circle_LEFT {
@@ -52,6 +53,9 @@
       height: 142px;
       top: 50px;
       right: 20%;
+
+      transition: transform 250ms ease-in-out;
+      animation: rotate-rtl 3000ms linear infinite;
     }
 
     .circle_RIGHT {
@@ -60,6 +64,9 @@
       height: 142px;
       bottom: 50px;
       left: 5%;
+
+      animation: rotate 3000ms linear infinite;
+      transition: transform 250ms ease-in-out;
     }
   }
 
@@ -123,7 +130,14 @@
         z-index: 3;
 
         h4 {
-          max-width: 300px;
+          max-width: 270px;
+          text-align: center;
+        }
+
+        .h4 {
+          &.maw {
+            max-width: 250px;
+          }
         }
       }
 
@@ -146,7 +160,8 @@
 
       .title {
         .h2 {
-          max-width: 700px;
+          max-width: 750px;
+          font-size: 26px;
         }
 
         .h4 {
@@ -174,6 +189,7 @@
       .benefits {
         position: relative;
         z-index: 1;
+        padding: 50px 20px;
 
         .benefit {
           z-index: 3;
@@ -195,6 +211,12 @@
   @media (max-width: $notebooks) {
     .text {
       padding: 20px 40px;
+
+      .title {
+        .h2 {
+          font-size: 24px;
+        }
+      }
 
       .button {
         max-width: 250px;
@@ -242,6 +264,8 @@
       .benefits {
         align-items: baseline;
         padding: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
 
         .vector {
           max-width: 350px;
@@ -258,6 +282,10 @@
       .title {
         align-items: center;
         gap: 10px;
+
+        .h2 {
+          font-size: 22px;
+        }
       }
     }
 
@@ -279,9 +307,13 @@
 
     .profit {
       .benefits {
+        display: flex;
         align-items: center;
         flex-direction: column;
 
+        .benefit {
+          max-height: unset;
+        }
         .vector {
           max-width: unset;
         }
@@ -302,7 +334,7 @@
 
         .h2 {
           letter-spacing: 1px;
-          font-size: 16px;
+          font-size: 17px;
 
           br {
             display: block;
@@ -347,7 +379,7 @@
         padding: 20px;
 
         .h4 {
-          font-size: 20px;
+          font-size: 18px;
           text-align: center;
         }
       }

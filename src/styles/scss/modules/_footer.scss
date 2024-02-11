@@ -1,0 +1,116 @@
+@use "../variables.scss" as *;
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+  flex-direction: column;
+  gap: 10px;
+  
+  background-color: $dark;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .img {
+      width: 50px;
+      height: 30px;
+    }
+
+    .text {
+      width: 210px;
+      height: 20px;
+    }
+  }
+
+  .contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      font-family: "maniford";
+      font-weight: 500;
+      font-size: 18px;
+      color: $footergrey;
+    }
+
+    .number {
+      margin-right: 30px;
+    }
+
+    .social {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 20px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .policy {
+    a {
+      font-size: 11px;
+      color: $footergrey;
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    padding: 20px 60px;
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 20px 40px;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 20px;
+
+    .logo {
+      gap: 10px;
+
+      .img {
+        width: 40px;
+      }
+
+      .text {
+        display: none;
+        width: 160px;
+        height: 20px;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .contacts {
+      .number {
+        margin-right: 10px;
+        font-size: 14px;
+      }
+
+      .social {
+        gap: 10px;
+
+        a {
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}

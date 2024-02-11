@@ -1,6 +1,8 @@
 @import "../variables.scss";
 
 .button {
+  position: relative;
+  overflow: hidden;
   padding: 25px 20px;
   border-radius: 20px;
   text-align: center;
@@ -38,5 +40,28 @@
 
   &.orange {
     background-color: $orange;
+  }
+
+  .blick {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    -webkit-transform: skewX(45deg) translateX(0);
+    transform: skewX(45deg) translateX(0);
+    -webkit-transition: none;
+    transition: none;
+
+    &.light {
+      webkit-animation: blick 5s ease-in-out infinite;
+      -moz-animation: blick 5s ease-in-out infinite;
+      -ms-animation: blick 5s ease-in-out infinite;
+      -o-animation: blick 5s ease-in-out infinite;
+      animation: blick 5s ease-in-out infinite;
+    }
   }
 }

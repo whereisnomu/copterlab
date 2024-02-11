@@ -1,0 +1,249 @@
+@use "../variables.scss" as *;
+
+#conditions {
+  width: 100%;
+  overflow: hidden;
+
+  .img {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+
+    img.picture {
+      object-fit: contain;
+      width: 100%;
+
+      margin-bottom: -5px;
+    }
+
+    .figure {
+      position: absolute;
+      left: 20%;
+      bottom: 20%;
+      width: 50px;
+      height: 50px;
+      z-index: 2;
+      transition: transform 0.25 ease-in-out;
+      animation: rotate 3000ms linear infinite;
+    }
+  }
+
+  .conditions {
+    background-color: $dark;
+    padding: 100px 100px 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .logo {
+      margin-bottom: 40px;
+      max-width: 500px;
+      width: 100%;
+      height: 50px;
+      z-index: 2;
+    }
+
+    .h2 {
+      color: $w;
+      max-width: 950px;
+      text-align: center;
+      margin-bottom: 60px;
+      z-index: 2;
+
+      span {
+        color: $green;
+      }
+    }
+
+    .figure {
+      position: absolute;
+      top: 4%;
+      right: 25%;
+      width: 60px;
+      height: 60px;
+      transition: all 0.5 ease-in-out;
+      animation: pulse 2000ms linear infinite;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      width: 100%;
+      z-index: 2;
+
+      .button {
+        max-width: 320px;
+        width: 100%;
+        font-size: 16px;
+
+        &.phone {
+          background-color: $green;
+          a {
+            color: $b;
+          }
+        }
+
+        &.app {
+          background-color: transparent;
+          border: 1px solid $green;
+
+          a {
+            color: $green;
+          }
+        }
+      }
+    }
+
+    .vector {
+      position: absolute;
+      right: -42%;
+      top: -20%;
+      object-fit: contain;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    .conditions {
+      padding: 80px 60px 150px;
+
+      .logo {
+        margin-bottom: 30px;
+      }
+
+      .h2 {
+        max-width: 780px;
+      }
+
+      .figure {
+        width: 50px;
+        height: 50px;
+        top: 8%;
+        right: 18%;
+      }
+
+      .vector {
+        right: -50%;
+        scale: 1.2;
+        top: -20%;
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .conditions {
+      padding: 80px 40px 150px;
+
+      .logo {
+        max-width: 450px;
+      }
+
+      .h2 {
+        font-size: 22px;
+        max-width: 600px;
+      }
+
+      .buttons {
+        .button {
+          max-width: 250px;
+          padding: 20px 10px;
+          font-size: 12px;
+        }
+      }
+
+      .vector {
+        right: -50%;
+        scale: 1.2;
+        top: 11%;
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .img {
+      img.picture {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      img.figure {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .conditions {
+      padding: 50px 20px 100px;
+
+      .h2 {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+
+      .logo {
+        max-width: 400px;
+        margin-bottom: 20px;
+      }
+
+      .figure {
+        width: 30px;
+        height: 30px;
+        top: 6%;
+        right: 4%;
+      }
+
+      .buttons {
+        .button {
+          max-width: 170px;
+          padding: 20px 10px;
+        }
+      }
+
+      .vector {
+        right: -50%;
+        scale: 1.5;
+        top: 17%;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .conditions {
+      .logo {
+        margin-bottom: 10px;
+      }
+
+      .h2 {
+        text-align: center !important;
+        margin-bottom: 40px;
+      }
+
+      .figure {
+        width: 25px;
+        height: 25px;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .button {
+          max-width: unset;
+          box-shadow: 0 4px 30px 0 rgba(183, 244, 70, 0.2);
+        }
+      }
+
+      .vector {
+        right: -50%;
+        scale: 2.5;
+        top: 30%;
+      }
+    }
+  }
+}

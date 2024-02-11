@@ -1,5 +1,5 @@
 @use "./header";
-@use "./mainscreen";
+@use "./main";
 @use "./drive";
 @use "./poll";
 @use "./tech";
@@ -11,3 +11,5 @@
 @use "./download";
 @use "./slider";
 @use "./steps";
+@use "./conditions";
+@use "./footer";
