@@ -132,10 +132,13 @@
     .text {
       .h2 {
         font-size: 20px;
+        text-align: center !important;
+        max-width: unset;
       }
 
       .h4 {
-        text-align: left;
+        text-align: center;
+        max-width: unset;
       }
     }
 

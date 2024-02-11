@@ -92,11 +92,37 @@
 
     .h2 {
       text-transform: uppercase;
-      max-width: 800px;
+      max-width: 530px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
 
       .f {
         color: $b;
+
+        .blick {
+          content: "";
+          // background-color: rgba(255, 255, 255, 0.5);
+          background-color: rgba($color: $green, $alpha: 0.5);
+          height: 100%;
+          width: 3em;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: -4.5em;
+          -webkit-transform: skewX(45deg) translateX(0);
+          transform: skewX(45deg) translateX(0);
+          -webkit-transition: none;
+          transition: none;
+
+          &.light {
+            webkit-animation: blick 3s ease-in-out infinite;
+            -moz-animation: blick 3s ease-in-out infinite;
+            -ms-animation: blick 3s ease-in-out infinite;
+            -o-animation: blick 3s ease-in-out infinite;
+            animation: blick 3s ease-in-out infinite;
+          }
+        }
       }
     }
     .h2,
