@@ -52,6 +52,9 @@
       margin-bottom: 60px;
       z-index: 2;
 
+      br {
+        display: none;
+      }
       span {
         color: $green;
       }
@@ -221,6 +224,10 @@
       .h2 {
         text-align: center !important;
         margin-bottom: 40px;
+
+        br {
+          display: block;
+        }
       }
 
       .figure {
