@@ -35,7 +35,7 @@ $city = $_POST['city'];
 
 $mail->setFrom('tf-no-reply-bot@mail.ru', 'tf-no-reply-bot');
 
-$mail->addAddress('Sereda_lena_91@mail.ru', 'Елена');
+$mail->addAddress('manager@copterlab.ru', 'Менеджер');
 // $mail->AddCC('irinazuboreva@topfranchise.ru', 'Irina Zubareva');
 // $mail->AddCC('rezultat_logoped@mail.ru', 'Logoped Rezultat');
 
@@ -189,7 +189,7 @@ bgcolor="#ffffff"
                           padding: 0;
                         "
                       >
-                        На лендинге <a href="iqworld-fr.ru">iqworld-fr.ru</a> Вам была оставлена заявка
+                        На лендинге <a href="fr-copterlab.ru">fr-copterlab.ru</a> Вам была оставлена заявка
                         <br />
                         Контакты заинтересованного лица: &nbsp; <br />
                       </p>
@@ -215,8 +215,8 @@ bgcolor="#ffffff"
                       >
                         Интересует:
                         <a
-                          href="https://topfranchise.ru/products/franshiza-iq-mir-semeynye-klassy-velikikh-otkrytiy/"
-                          >Франшиза «iQ Мир» — семейные классы великих открытий
+                          href="https://topfranchise.ru/products/franshiza-tsentra-fop-kopterlab-po-podgotovke-operatorov-bpla/"
+                          >Франшиза  «КоптерЛаб» — это авторская программа обучения управлению БПЛА, созданная лучшими пилотами и инженерами страны.
                         </a>
                       </p>
                       <p
@@ -387,5 +387,5 @@ $mail->msgHTML($message);
 
 $mail->send();
 
-header("Location: ../thankyou.html")
+header("Location: ../index.html")
 ?>
