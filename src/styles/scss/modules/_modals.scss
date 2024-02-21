@@ -50,6 +50,7 @@
     .C_RIGHT {
       right: -100px;
       bottom: 45%;
+      max-width: 450px;
     }
 
     .C_LEFT {
@@ -209,15 +210,15 @@
     .modals {
       .C_RIGHT {
         bottom: unset;
-        width: 300px;
-        top: -15%;
+        width: 180px;
+        top: -8%;
         right: -20px;
       }
 
       .C_LEFT {
-        width: 250px;
-        bottom: -100px;
-        left: -20px;
+        width: 200px;
+        bottom: -50px;
+        left: -30px;
       }
 
       &__modal {
@@ -270,7 +271,7 @@
 
       .C_RIGHT {
         width: 150px;
-        top: -8%;
+        top: -4%;
         right: -20px;
       }
 

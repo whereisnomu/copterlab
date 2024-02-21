@@ -68,6 +68,7 @@
       height: 60px;
       transition: all 0.5 ease-in-out;
       animation: pulse 2000ms linear infinite;
+      z-index: 2;
     }
 
     .buttons {
@@ -127,7 +128,7 @@
         width: 50px;
         height: 50px;
         top: 8%;
-        right: 18%;
+        right: 14%;
       }
 
       .vector {

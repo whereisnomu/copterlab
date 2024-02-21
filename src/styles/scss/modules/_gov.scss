@@ -87,6 +87,10 @@
       .supports {
         display: flex;
         justify-content: space-around;
+
+        img.support {
+          shape-rendering: geometricPrecision;
+        }
       }
     }
   }
