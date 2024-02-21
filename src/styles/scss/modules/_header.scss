@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 100px;
+  z-index: 50;
+  position: fixed;
+  width: 100%;
 
   background-color: $headerbg;
 

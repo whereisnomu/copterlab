@@ -218,6 +218,7 @@ body {
   .modal-open {
     overflow: hidden;
   }
+
   .modal {
     display: none;
     position: fixed;
@@ -235,12 +236,12 @@ body {
 
   .modal-content {
     position: relative;
-    background-color: $blue;
+    background-color: $dark;
     margin: 0 auto;
     margin-top: 100px;
     padding: 30px 30px 40px 30px;
     border-radius: 20px;
-    border: 1px solid #888;
+    // border: 1px solid #888;
     box-sizing: border-box;
     width: 100%;
     max-width: 450px;
@@ -253,6 +254,7 @@ body {
       font-size: 28px;
       font-weight: bold;
     }
+
     .mob {
       display: none;
     }
@@ -309,8 +311,8 @@ body {
         }
 
         .button {
-          background-color: $w;
-          color: $blue;
+          // background-color: $w;
+          // color: $blue;
           font-size: 15px;
           font-weight: 500;
         }

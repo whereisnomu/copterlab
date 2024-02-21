@@ -1,0 +1,19 @@
+doctype html
+html(lang="ru")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width" )
+      link(rel="stylesheet", href="./css/style.css")
+
+
+      title Главная
+   body 
+      section#success
+         include ../sections/_header
+
+         .success 
+            h1.h1 СПАСИБО!<br> СКОРО МЫ <br class='br'> С ВАМИ СВЯЖЕМСЯ
+            img(src="./img/success/logo.svg", alt="logo_success" ).logo
+            .button.green 
+               a(href="index.html") Ввернуться назад 
+               span.blick.light

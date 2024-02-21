@@ -31,16 +31,20 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
 $city = $_POST['city'];
+$e_bpla = $_POST['e_bpla'];
+$e_business = $_POST['e_business'];
+$network = $_POST['network'];
+
 
 
 $mail->setFrom('tf-no-reply-bot@mail.ru', 'tf-no-reply-bot');
 
 $mail->addAddress('manager@copterlab.ru', 'Менеджер');
-// $mail->AddCC('arturchagirov@gmail.com', 'Arthur Chagirov');
+$mail->AddCC('arturchagirov@gmail.com', 'Arthur Chagirov');
 // $mail->AddCC('rezultat_logoped@mail.ru', 'Logoped Rezultat');
 
 
-$subject = "Новая заявка на франшизу! №". rand(100000, 999999); 
+$subject = "Пройденный опрос! №". rand(100000, 999999); 
 
 $mail->Subject = $subject;
 
@@ -167,7 +171,7 @@ bgcolor="#ffffff"
                           padding: 0;
                         "
                       >
-                      Новая заявка!
+                      Пройденный опрос!
                       </h1>
                     </td>
                   </tr>
@@ -189,9 +193,9 @@ bgcolor="#ffffff"
                           padding: 0;
                         "
                       >
-                        На лендинге <a href="fr-copterlab.ru">fr-copterlab.ru</a> Вам была оставлена заявка
+                        На лендинге <a href="fr-copterlab.ru">fr-copterlab.ru</a> клиент прошел тест-опрос!
                         <br />
-                        Контакты заинтересованного лица: &nbsp; <br />
+                        Контакты и ответы на вопросы заинтересованного лица: &nbsp; <br />
                       </p>
                     </td>
                   </tr>
@@ -219,6 +223,7 @@ bgcolor="#ffffff"
                           >Франшиза  «КоптерЛаб» — это авторская программа обучения управлению БПЛА, созданная лучшими пилотами и инженерами страны.
                         </a>
                       </p>
+
                       <p
                         style="
                           font-size: 18px;
@@ -283,6 +288,60 @@ bgcolor="#ffffff"
                       Город: '. $city .'
 
                     </p>
+
+                    <p
+                    style="
+                      font-size: 18px;
+                      font-style: normal;
+                      font-weight: 400;
+                      letter-spacing: -0.01em;
+                      line-height: 28px;
+                      color: #2b2f33;
+                      margin: 0;
+                      padding: 0;
+                    "
+                  >
+                     Есть ли опыт управления БПЛА?
+                     <br>
+                     Ответ: '. $e_bpla .'
+
+                  </p>
+
+                  <p
+                  style="
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    letter-spacing: -0.01em;
+                    line-height: 28px;
+                    color: #2b2f33;
+                    margin: 0;
+                    padding: 0;
+                  "
+                >
+                  У вас был опыт собственного бизнеса?
+                  <br>
+                   Ответ: '. $e_business .'
+
+                </p>
+
+                <p
+                style="
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 400;
+                  letter-spacing: -0.01em;
+                  line-height: 28px;
+                  color: #2b2f33;
+                  margin: 0;
+                  padding: 0;
+                "
+              >
+               Есть ли знакомые инструкторы БПЛА?
+               <br>
+               Ответ: '. $network .'
+
+              </p>
                     </td>
                   </tr>
                 </tbody>
